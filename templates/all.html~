@@ -1,0 +1,25 @@
+{% load thumbnail %}
+<style type ="text/css">
+h1{color:#0000FF}
+html {background-color: #E6E6FA}
+</style>
+<html lang="en">
+    <head>
+        <title>Загрузка файла на сервер</title>
+    </head>
+    <center>
+        <h1>Галерея изображений<h1/>
+        <hr>
+        {% for pic in all_pics %}
+            {% thumbnail pic.picture "x150" crop="center" as im %}
+                {% if forloop.counter0|divisibleby:"5" %}
+                    <br>
+                {% endif %}
+                <a href="/pic/{{pic.id}}">
+                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                </a>
+            {% endthumbnail %}
+        {% endfor %} 
+	<a href="/file"><input type="button" value="Добавить картинку" /></a>
+    </center>
+</html>

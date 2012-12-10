@@ -1,0 +1,19 @@
+<style type ="text/css">
+h1{color:#0000FF}
+html {background-color: #E6E6FA}
+</style>
+<html lang="en">
+	<head>
+		<title>Загрузка файла на сервер</title>
+	</head>
+	<center>
+		<h1>Редактор изображения<h1/>
+		<hr>
+		<img src="{{pic.picture.url}}">
+		<br>
+		<a href="/f1/{{pic.id}}"><input type="button" value="Размытие" /></a>
+		<a href="/f2/{{pic.id}}"><input type="button" value="Контуры" /></a>
+		<a href="/f3/{{pic.id}}"><input type="button" value="Детали" /></a>
+		<a href="/all"><input type="button" value="Все картинки" /></a>
+	</center>
+</html>
